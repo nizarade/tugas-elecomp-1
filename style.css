@@ -1,14 +1,14 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700; /* Menggunakan Poppins Bold */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Menggunakan Poppins Bold */
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400; /* Menggunakan Poppins Regular */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; /* Menggunakan Poppins Regular */
 }
+
