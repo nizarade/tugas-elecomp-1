@@ -1134,10 +1134,17 @@
     class="bg-gradient-to-br from-blue-50 to-white pt-16 relative mt-12 overflow-hidden shadow-lg"
   >
     <div class="container mx-auto px-4 relative z-10">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
         <!-- Informasi Perusahaan -->
-        <div>
-          <img src="./logo1.png" alt="Logo Perusahaan" class="h-12 mb-6" />
+        <div class="md:col-span-2">
+          <div class="flex text-center items-center mb-6">
+            <img src="./logo1.png" alt="Logo Perusahaan" class="h-12 " />
+            <p
+            class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
+            >
+            Creadigi
+          </div>
+          </p>  
           <p class="text-gray-700 text-sm mb-8">
             Creadigi adalah perusahaan yang berdedikasi untuk menghadirkan
             solusi digital inovatif yang memberdayakan bisnis dan meningkatkan
@@ -1195,9 +1202,9 @@
           </div>
         </div>
 
-        <!-- Tautan Navigasi -->
+        <!-- Tautan Berguna -->
         <div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-5">Navigasi</h3>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5">Tautan Berguna</h3>
           <ul class="space-y-3">
             <li>
               <a
@@ -1210,21 +1217,21 @@
               <a
                 href="#"
                 class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                >Tentang Kami</a
+                >Tentang</a
               >
             </li>
             <li>
               <a
                 href="#"
                 class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                >Layanan</a
+                >Artikel</a
               >
             </li>
             <li>
               <a
                 href="#"
                 class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                >Blog</a
+                >Produk</a
               >
             </li>
             <li>
@@ -1237,30 +1244,69 @@
           </ul>
         </div>
 
-        <!-- Berlangganan -->
+        <!-- Artikel Kami -->
         <div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-5">Berlangganan</h3>
-          <p class="text-gray-700 text-sm mb-6">
-            Dapatkan update terbaru dan penawaran eksklusif langsung ke kotak
-            masuk Anda.
-          </p>
-          <div class="flex rounded-md shadow-sm">
-            <input
-              type="email"
-              placeholder="Email Anda"
-              class="flex-1 border border-gray-300 rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button
-              class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-r-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transform hover:scale-105 active:scale-95"
-            >
-              Kirim
-            </button>
-          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5">Artikel Kami</h3>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                >Poster</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                >Desain Website</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                >Mind Mapping</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5">Social Media</h3>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 transition-colors duration-300 flex items-center"
+              >
+                <img class="size-6  mr-2" src="./instagram_logo.png" alt="">
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Marketplace -->
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5">Marketplace</h3>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                >No Social Media and Marketplace available</a
+              >
+            </li>
+          </ul>
+        </div>
+
         </div>
       </div>
 
       <!-- Bagian Bawah Footer -->
-      <div class="py-2 border-gray-200">
+      <div class="py-2 px-16 border-t mt-4 border-gray-200">
         <div
           class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600"
         >
@@ -1281,7 +1327,7 @@
       </div>
     </div>
 
-    <!-- Elemen Dekoratif (Optional) -->
+    <!-- Elemen Dekoratif -->
     <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
       <div
         class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 bg-blue-200 rounded-full w-64 h-64 filter blur-3xl opacity-50"
