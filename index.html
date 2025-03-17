@@ -32,7 +32,10 @@
       <div
         class="flex justify-between px-24 py-6 shadow-md bg-gradient-to-br from-blue-50 to-white"
       >
-        <div class="flex items-center">
+        <div
+          onclick="window.location.href='index.html'"
+          class="flex items-center cursor-pointer"
+        >
           <img class="size-12 mr-4" src="./logo1.png" alt="" />
           <p
             class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
@@ -364,24 +367,26 @@
                 amet adipisci. Quasi et, enim itaque eos iusto exercitationem.
               </p>
               <!-- Tombol "Baca Selengkapnya" -->
-              <a
-                href="#"
-                class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300"
-              >
-                Baca Selengkapnya
-                <svg
-                  class="w-5 h-5 ml-2 -mr-1"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div class="mt-4 w-full">
+                <a
+                  href="./tentang.html"
+                  class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-gradient-to-br from-blue-50 to-white text-blue-500 rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300 w-full"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 10.293a1 1 0 01-1.414-1.414l6-6z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
+                  <span class="relative z-0">Baca Selengkapnya</span>
+                  <svg
+                    class="w-5 h-5 ml-2 -mr-1 relative transition-all duration-300 group-hover:translate-x-1 group-hover:rotate-180 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 10.293a1 1 0 01-1.414-1.414l6-6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -430,8 +435,8 @@
           </div>
           <div class="pr-16">
             <a
-              href="#"
-              class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-blue-600 text-white rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300"
+              href="./product.html"
+              class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-gradient-to-br from-blue-50 to-white text-blue-500 rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300"
             >
               <span class="relative z-0">Lihat Semua</span>
               <svg
@@ -457,7 +462,7 @@
           >
             <!-- Produk 1 -->
             <div
-              onclick="window.location.href='#'"
+              onclick="window.location.href='./detailProduct.html'"
               class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
             >
               <img
@@ -485,7 +490,7 @@
 
             <!-- Produk 2 -->
             <div
-              onclick="window.location.href='#'"
+              onclick="window.location.href='./detailProduct.html'"
               class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
             >
               <img
@@ -514,7 +519,7 @@
 
             <!-- Produk 3 -->
             <div
-              onclick="window.location.href='#'"
+              onclick="window.location.href='./detailProduct.html'"
               class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
             >
               <img
@@ -543,7 +548,7 @@
 
             <!-- Produk 4 -->
             <div
-              onclick="window.location.href='#'"
+              onclick="window.location.href='./detailProduct.html'"
               class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
             >
               <img
@@ -636,7 +641,10 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 px-16 gap-4 md:gap-8">
             <!-- Activity Item 1 -->
-            <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <div
+              onclick="window.location.href='./detailActivity.html'"
+              class="relative rounded-lg overflow-hidden shadow-md group cursor-pointer"
+            >
               <img
                 src="./activity1.jpeg"
                 alt="Activity 1"
@@ -653,12 +661,21 @@
                     Redesain Website dapat Meningkatkan Traffic Website sebesar
                     30%
                   </p>
+                  <div
+                    class="w-full flex justify-between pt-2 text-white text-sm"
+                  >
+                    <p class="font-bold">Desain Website</p>
+                    <p class="font-bold">13 Maret 2025</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Activity Item 2 -->
-            <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <div
+              onclick="window.location.href='./detailActivity.html'"
+              class="relative rounded-lg overflow-hidden shadow-md group cursor-pointer"
+            >
               <img
                 src="./activity2.jpeg"
                 alt="Activity 2"
@@ -674,12 +691,21 @@
                   <p class="text-sm text-gray-200">
                     Poster yang Menarik dapat Membantu Mengembangkan Usahamu
                   </p>
+                  <div
+                    class="w-full flex justify-between pt-2 text-white text-sm"
+                  >
+                    <p class="font-bold">Desain Poster</p>
+                    <p class="font-bold">12 Maret 2025</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Activity Item 3 -->
-            <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <div
+              onclick="window.location.href='./detailActivity.html'"
+              class="relative rounded-lg overflow-hidden shadow-md group cursor-pointer"
+            >
               <img
                 src="./activity3.jpeg"
                 alt="Activity 3"
@@ -695,12 +721,21 @@
                   <p class="text-sm text-gray-200">
                     Mind Map membantu anda Dalam Plotting Usahamu
                   </p>
+                  <div
+                    class="w-full flex justify-between pt-2 text-white text-sm"
+                  >
+                    <p class="font-bold">Mind Mapping</p>
+                    <p class="font-bold">11 Maret 2025</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Activity Item 4 -->
-            <div class="relative rounded-lg overflow-hidden shadow-md group">
+            <div
+              onclick="window.location.href='./detailActivity.html'"
+              class="relative rounded-lg overflow-hidden shadow-md group cursor-pointer"
+            >
               <img
                 src="./activity4.jpeg"
                 alt="Activity 4"
@@ -717,6 +752,12 @@
                     Kampanye Branding Ulang Membantu Startup Teknologi
                     Mendapatkan Investor
                   </p>
+                  <div
+                    class="w-full flex justify-between pt-2 text-white text-sm"
+                  >
+                    <p class="font-bold">Rebranding</p>
+                    <p class="font-bold">10 Maret 2025</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -725,8 +766,8 @@
           <!-- Lihat Semua Button -->
           <div class="px-16 mt-4 w-full">
             <a
-              href="#"
-              class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-blue-600 text-white rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300 w-full"
+              href="./activity.html"
+              class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-gradient-to-br from-blue-50 to-white text-blue-500 rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300 w-full"
             >
               <span class="relative z-0">Lihat Semua</span>
               <svg
@@ -799,7 +840,8 @@
               style="left: 0; right: auto"
             >
               <p class="text-sm text-slate-700">
-                Jelajahi artikel tentang Produk Digital dari kami yang tentunya memberikan insight yang inovatif dan kreatif
+                Jelajahi artikel tentang Produk Digital dari kami yang tentunya
+                memberikan insight yang inovatif dan kreatif
               </p>
             </div>
           </div>
@@ -808,6 +850,7 @@
             <!-- Artikel Utama -->
             <div class="md:col-span-2 cursor-pointer">
               <div
+                onclick="window.location.href='./detailArticle.html'"
                 class="rounded-xl bg-gradient-to-br from-blue-50 to-white shadow-md overflow-hidden flex flex-col h-full transform transition-transform duration-200 hover:scale-105 hover:shadow-lg"
               >
                 <img
@@ -847,6 +890,7 @@
               <div class="space-y-3">
                 <!-- Contoh Artikel Sampingan 1 -->
                 <div
+                  onclick="window.location.href='./detailArticle.html'"
                   class="rounded-xl shadow-md overflow-hidden flex flex-row items-center transform transition-transform duration-200 hover:scale-105 hover:shadow-lg bg-gradient-to-br from-blue-50 to-white cursor-pointer"
                 >
                   <div class="w-32 h-24 flex-shrink-0">
@@ -875,6 +919,7 @@
 
                 <!-- Contoh Artikel Sampingan 2 -->
                 <div
+                  onclick="window.location.href='./detailArticle.html'"
                   class="rounded-xl shadow-md overflow-hidden flex flex-row items-center transform transition-transform duration-200 hover:scale-105 hover:shadow-lg bg-gradient-to-br from-blue-50 to-white cursor-pointer"
                 >
                   <div class="w-32 h-24 flex-shrink-0">
@@ -903,6 +948,7 @@
 
                 <!-- Contoh Artikel Sampingan 3 -->
                 <div
+                  onclick="window.location.href='./detailArticle.html'"
                   class="rounded-xl shadow-md overflow-hidden flex flex-row items-center transform transition-transform duration-200 hover:scale-105 hover:shadow-lg bg-gradient-to-br from-blue-50 to-white cursor-pointer"
                 >
                   <div class="w-32 h-24 flex-shrink-0">
@@ -931,6 +977,7 @@
 
                 <!-- Contoh Artikel Sampingan 4 -->
                 <div
+                  onclick="window.location.href='./detailArticle.html'"
                   class="rounded-xl shadow-md overflow-hidden flex flex-row items-center transform transition-transform duration-200 hover:scale-105 hover:shadow-lg bg-gradient-to-br from-blue-50 to-white cursor-pointer"
                 >
                   <div class="w-32 h-24 flex-shrink-0">
@@ -959,8 +1006,8 @@
                 <!-- Lihat Semua Button -->
                 <div class="mt-4 w-full">
                   <a
-                    href="#"
-                    class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-blue-600 text-white rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300 w-full"
+                    href="./article.html"
+                    class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-gradient-to-br from-blue-50 to-white text-blue-500 rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300 w-full"
                   >
                     <span class="relative z-0">Lihat Semua</span>
                     <svg
@@ -1001,15 +1048,19 @@
       </script>
 
       <!-- Contact Section -->
-      <section class="shadow-2xl py-16 relative overflow-hidden bg-gradient-to-br from-blue-50 to-white rounded-2xl">
+      <section
+        class="shadow-2xl py-16 relative overflow-hidden bg-gradient-to-br from-blue-50 to-white rounded-2xl"
+      >
         <div class="container mx-auto px-4 relative z-10">
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-16"
           >
             <!-- Bagian Kiri: Tulisan dan Info Kontak -->
             <div class="animate-fade-in">
-              <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
-                Get In Touch
+              <h2
+                class="text-4xl font-extrabold text-gray-900 mb-6 underline decoration-blue-600"
+              >
+                Kontak
               </h2>
               <p class="text-gray-700 text-lg mb-8">
                 Kami sangat antusias untuk berkolaborasi dengan Anda! Jangan
@@ -1107,7 +1158,7 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.429009309108!2d112.61231337417868!3d-7.954642380663357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788276397995cd%3A0x49c0e9b16380583!2sUniversitas%20Brawijaya!5e0!3m2!1sen!2sid!4v1701849405272!5m2!1sen!2sid"
                 width="600"
                 height="450"
-                style="border:0;"
+                style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -1138,13 +1189,13 @@
         <!-- Informasi Perusahaan -->
         <div class="md:col-span-2">
           <div class="flex text-center items-center mb-6">
-            <img src="./logo1.png" alt="Logo Perusahaan" class="h-12 " />
+            <img src="./logo1.png" alt="Logo Perusahaan" class="h-12" />
             <p
-            class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
+              class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
             >
-            Creadigi
+              Creadigi
+            </p>
           </div>
-          </p>  
           <p class="text-gray-700 text-sm mb-8">
             Creadigi adalah perusahaan yang berdedikasi untuk menghadirkan
             solusi digital inovatif yang memberdayakan bisnis dan meningkatkan
@@ -1204,7 +1255,9 @@
 
         <!-- Tautan Berguna -->
         <div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-5">Tautan Berguna</h3>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5">
+            Tautan Berguna
+          </h3>
           <ul class="space-y-3">
             <li>
               <a
@@ -1281,7 +1334,7 @@
                 href="#"
                 class="text-gray-700 hover:text-blue-600 transition-colors duration-300 flex items-center"
               >
-                <img class="size-6  mr-2" src="./instagram_logo.png" alt="">
+                <img class="size-6 mr-2" src="./instagram_logo.png" alt="" />
                 Instagram
               </a>
             </li>
@@ -1301,28 +1354,22 @@
             </li>
           </ul>
         </div>
-
-        </div>
       </div>
+    </div>
 
-      <!-- Bagian Bawah Footer -->
-      <div class="py-2 px-16 border-t mt-4 border-gray-200">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600"
-        >
-          <p class="mb-2 md:mb-0">© 2024 Creadigi. All rights reserved.</p>
-          <div class="flex space-x-4">
-            <a
-              href="#"
-              class="hover:text-blue-600 transition-colors duration-300"
-              >Privacy Policy</a
-            >
-            <a
-              href="#"
-              class="hover:text-blue-600 transition-colors duration-300"
-              >Terms of Service</a
-            >
-          </div>
+    <!-- Bagian Bawah Footer -->
+    <div class="py-2 px-16 border-t mt-4 border-gray-200">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600"
+      >
+        <p class="mb-2 md:mb-0">© 2024 Creadigi. All rights reserved.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-blue-600 transition-colors duration-300"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-blue-600 transition-colors duration-300"
+            >Terms of Service</a
+          >
         </div>
       </div>
     </div>

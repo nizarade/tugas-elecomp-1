@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product | Creadigi</title>
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-sky-50">
+    <!-- Navbar -->
+    <nav>
+      <div
+        class="flex justify-between px-24 py-6 shadow-md bg-gradient-to-br from-blue-50 to-white"
+      >
+        <div
+          onclick="window.location.href='index.html'"
+          class="flex items-center cursor-pointer"
+        >
+          <img class="size-12 mr-4" src="./logo1.png" alt="" />
+          <p
+            class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
+          >
+            Creadigi
+          </p>
+        </div>
+        <div class="flex gap-4">
+          <ul class="flex gap-4 items-center text-gray-600 font-semibold">
+            <li
+              class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
+            >
+              Beranda
+            </li>
+            <li
+              class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
+            >
+              Tentang
+            </li>
+            <li
+              class="active:text-blue-600 hover:transform text-blue-600 hover:scale-105 cursor-pointer"
+            >
+              Produk
+            </li>
+
+            <!-- Aktivitas dengan Submenu -->
+            <li class="relative group">
+              <span
+                class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
+              >
+                Aktivitas
+              </span>
+              <ul
+                class="absolute hidden group-hover:block top-full left-0 bg-white shadow-md rounded-md py-2 w-48 z-10"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Workshop</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Seminar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Pelatihan</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Artikel dengan Submenu -->
+            <li class="relative group">
+              <span
+                class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
+              >
+                Artikel
+              </span>
+              <ul
+                class="absolute hidden group-hover:block top-full left-0 bg-white shadow-md rounded-md py-2 w-48 z-10"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Teknologi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Desain</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >Marketing</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li
+              class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
+            >
+              Kontak
+            </li>
+
+            <!-- Bahasa dengan Submenu -->
+            <li class="relative group">
+              <span
+                class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
+              >
+                Bahasa
+              </span>
+              <ul
+                class="absolute hidden group-hover:block top-full left-0 bg-white shadow-md rounded-md py-2 w-48 z-10"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center"
+                  >
+                    <img
+                      src="./indonesia_logo.png"
+                      alt="Indonesia"
+                      class="mr-2 w-5 h-5 rounded-full"
+                    />
+                    Indonesia
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center"
+                  >
+                    <img
+                      src="./english_logo.png"
+                      alt="Inggris"
+                      class="mr-2 w-5 h-5 rounded-full"
+                    />
+                    Inggris
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto py-8 px-16">
+      <!-- Title -->
+      <div class="flex justify-between py-6">
+        <div>
+          <div class="border-l-8 border-sky-600 pl-4">
+            <h1 class="text-3xl font-semibold text-gray-800">Produk</h1>
+            <p class="text-gray-600 mt-2">
+              Temukan Produk Desain Digital terbaik dari kami..
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container justify-center items-center mx-auto px-16">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <!-- Produk 1 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohPoster.jpeg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Poster Design Kreatif
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Desain poster menawan untuk promosikan bisnismu.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+
+          <!-- Produk 2 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohWebsite.jpg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Desain Website Modern
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Desain website responsif untuk semua perangkat
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+
+          <!-- Produk 3 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohMindMap.jpeg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Template Mind Mapping
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Visualisasikan ide dengan template mind mapping.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+
+          <!-- Produk 4 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohIconSetPremium.jpeg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Icon Set Premium
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Icon premium untuk mempercantik tampilan website Anda.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+
+          <!-- Produk 5 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohWebsite.jpg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Desain Website Modern
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Desain website responsif untuk semua perangkat
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+
+          <!-- Produk 6 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohPoster.jpeg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Poster Design Kreatif
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Desain poster menawan untuk promosikan bisnismu.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+
+          <!-- Produk 7 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohIconSetPremium.jpeg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Icon Set Premium
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Icon premium untuk mempercantik tampilan website Anda.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+
+          <!-- Produk 8 -->
+          <div
+            onclick="window.location.href='./detailProduct.html'"
+            class="group relative bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          >
+            <img
+              src="./contohMindMap.jpeg"
+              alt="Poster Design"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out"
+            />
+
+            <div class="p-6 relative">
+              <h3
+                class="text-xl font-semibold text-blue-500 transition-colors duration-300 ease-in-out mb-2"
+              >
+                Template Mind Mapping
+              </h3>
+              <p class="text-slate-400 text-sm mb-4">
+                Visualisasikan ide dengan template mind mapping.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ease-in-out"
+              >
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      class="bg-gradient-to-br from-blue-50 to-white pt-16 relative mt-12 overflow-hidden shadow-lg"
+    >
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+          <!-- Informasi Perusahaan -->
+          <div class="md:col-span-2">
+            <div class="flex text-center items-center mb-6">
+              <img src="./logo1.png" alt="Logo Perusahaan" class="h-12" />
+              <p
+                class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
+              >
+                Creadigi
+              </p>
+            </div>
+            <p class="text-gray-700 text-sm mb-8">
+              Creadigi adalah perusahaan yang berdedikasi untuk menghadirkan
+              solusi digital inovatif yang memberdayakan bisnis dan meningkatkan
+              pengalaman pengguna.
+            </p>
+            <!-- Tautan Media Sosial -->
+            <div class="flex space-x-5">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.66 9.156 8.432 9.829V15.307h-2.541v-3.914h2.541V9.881c0-2.511 1.492-3.891 3.777-3.891 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.877h2.779l-.443 2.894h-2.336v6.022A10 10 0 0022 12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07a7.027 7.027 0 014.858.988 7.027 7.027 0 01.988 4.858c.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85a7.027 7.027 0 01-.988 4.858 7.027 7.027 0 01-4.858.988c-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07a7.027 7.027 0 01-4.858-.988 7.027 7.027 0 01-.988-4.858c-.058-1.266-.07-1.646-.07-4.85s.012-3.684.07-4.85a7.027 7.027 0 01.988-4.858 7.027 7.027 0 014.858-.988c1.266-.058 1.646-.07 4.85-.07m0 2.16c-3.217 0-3.62.012-4.87.07a5.027 5.027 0 00-3.542.703 5.027 5.027 0 00-.703 3.542c-.058 1.25-.07 1.653-.07 4.87s.012 3.62.07 4.87a5.027 5.027 0 00.703 3.542 5.027 5.027 0 003.542.703c1.25.058 1.653.07 4.87.07s3.62-.012 4.87-.07a5.027 5.027 0 003.542-.703 5.027 5.027 0 00.703-3.542c.058-1.25-.07-1.653-.07-4.87s.012-3.62-.07-4.87a5.027 5.027 0 00-.703-3.542 5.027 5.027 0 00-3.542-.703c-1.25-.058-1.653-.07-4.87-.07m0 5.483a3.034 3.034 0 100 6.068 3.034 3.034 0 000-6.068m2.45 1.043a1.32 1.32 0 11-2.64 0 1.32 1.32 0 012.64 0"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.288-.008-.572-.029-.85a8.349 8.349 0 002.275-2.275c.154.29.305.594.453.91a8.318 8.318 0 01-3.779 2.04 16.109 16.109 0 00-1.05-.247 8.348 8.348 0 01-5.991-3.49 8.348 8.348 0 01-3.49-5.991 16.109 16.109 0 00-.247-1.05 8.317 8.317 0 012.04-3.779c.316-.148.62-.299.91-.453a8.349 8.349 0 00-2.275 2.275c-.272.021-.55-.006-.85-.029 0 5.422 4.291 11.675 11.675 11.675z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tautan Berguna -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-5">
+              Tautan Berguna
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Tentang</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Artikel</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Produk</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Artikel Kami -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-5">
+              Artikel Kami
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Poster</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Desain Website</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >Mind Mapping</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-5">
+              Social Media
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300 flex items-center"
+                >
+                  <img class="size-6 mr-2" src="./instagram_logo.png" alt="" />
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Marketplace -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-5">
+              Marketplace
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  >No Social Media and Marketplace available</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bagian Bawah Footer -->
+      <div class="py-2 px-16 border-t mt-4 border-gray-200">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600"
+        >
+          <p class="mb-2 md:mb-0">© 2024 Creadigi. All rights reserved.</p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="hover:text-blue-600 transition-colors duration-300"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="hover:text-blue-600 transition-colors duration-300"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Elemen Dekoratif -->
+      <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div
+          class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 bg-blue-200 rounded-full w-64 h-64 filter blur-3xl opacity-50"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 bg-blue-300 rounded-full w-48 h-48 filter blur-3xl opacity-50"
+        ></div>
+      </div>
+    </footer>
+  </body>
+</html>
