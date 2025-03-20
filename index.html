@@ -26,7 +26,7 @@
 
     <title>Tugas Elecomp 1</title>
   </head>
-  <body class="w-full bg-sky-50">
+  <body class="w-full bg-[#fcffff]">
     <!-- Navbar -->
     <nav>
       <div
@@ -338,14 +338,13 @@
       });
     </script>
 
-    <div class="container">
+    <div class="container pt-12">
       <!-- Tentang Section -->
-      <section class="flex flex-col text-slate-700 gap-4 my-6 px-12">
-        <div class="w-fit">
-          <p
-            class="text-4xl text-slate-700 font-bold border-b-4 border-blue-600"
-          >
-            Tentang
+      <section id="about" class="flex flex-col text-slate-700 gap-4 my-6 px-12">
+        <div class="border-l-8 border-sky-600 pl-4">
+          <h1 class="text-3xl font-semibold text-gray-800">Tentang</h1>
+          <p class="text-slate-500 text-lg font-semibold mt-2">
+            Temukan nilai dan komitmen kami dalam menciptakan solusi...
           </p>
         </div>
         <div class="flex gap-4 px-16">
@@ -355,7 +354,10 @@
 
           <div class="w-1/2 flex flex-col gap-4 justify-between py-6">
             <div class="flex flex-col gap-4">
-              <p class="text-xl font-bold">
+              <p
+                class="text-xl font-bold hover:text-sky-600 transition-all transform duration-300 cursor-pointer"
+                onclick="window.location.href='./tentang.html'"
+              >
                 Design Digital | Lebih dari 1000+ Client telah Mempercayai Kami
               </p>
               <p class="text-slate-500">
@@ -393,41 +395,12 @@
       </section>
 
       <!-- Our Products Section -->
-      <section class="px-12 py-16">
+      <section id="product" class="px-12 py-16">
         <div class="w-full flex items-center justify-between my-6">
-          <div class="relative flex items-center justify-between">
-            <div class="w-fit flex items-center">
-              <p
-                class="text-3xl font-bold border-b-4 text-slate-700 border-blue-600 mr-2"
-              >
-                Produk Digital Unggulan
-              </p>
-              <span
-                class="ml-2 text-slate-500 cursor-pointer"
-                id="infoIconProduct"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.834a.75.75 0 001.064.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div
-              class="absolute top-full left-0 mt-2 bg-white border border-blue-600 text-slate-700 rounded-md shadow-md p-4 w-64 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              id="tooltip"
-              style="left: 0; right: auto"
-            >
-              <p class="text-sm text-slate-700">
+          <div class="relative flex items-center justify-between w-2/3">
+            <div class="border-l-8 border-sky-600 pl-4">
+              <h1 class="text-3xl font-semibold text-gray-800">Produk</h1>
+              <p class="text-slate-500 text-lg font-semibold mt-2">
                 Kami menawarkan berbagai produk digital berkualitas tinggi untuk
                 mendukung bisnis dan proyek kreatif Anda.
               </p>
@@ -578,64 +551,19 @@
         </div>
       </section>
 
-      <script>
-        const infoIconProduct = document.getElementById("infoIconProduct");
-        const tooltip = document.getElementById("tooltip");
-
-        infoIconProduct.addEventListener("mouseenter", () => {
-          tooltip.classList.remove("opacity-0");
-          tooltip.classList.add("opacity-100");
-        });
-
-        infoIconProduct.addEventListener("mouseleave", () => {
-          tooltip.classList.remove("opacity-100");
-          tooltip.classList.add("opacity-0");
-        });
-      </script>
-
       <!-- Our Activity Section -->
-      <section id="activity" class="py-12">
-        <div class="container mx-auto text-center">
-          <div class="w-full flex justify-center text-center my-6">
-            <div class="relative flex items-center justify-between">
-              <div class="w-fit flex justify-center items-center">
-                <p
-                  class="text-4xl font-bold border-b-4 text-slate-700 border-blue-600"
-                >
-                  Aktivitas Kami
-                </p>
-                <span
-                  class="ml-2 text-slate-500 cursor-pointer"
-                  id="infoIconActivity"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.834a.75.75 0 001.064.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <div
-                class="absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-md shadow-md p-4 w-64 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                id="tooltipActivity"
-                style="left: 0; right: auto"
-              >
-                <p class="text-sm text-slate-700">
-                  Contoh aktivitas di bawah ini mencerminkan dedikasi kami untuk
-                  membantu bisnis berkembang melalui solusi digital yang
-                  inovatif.
-                </p>
-              </div>
+      <section id="activity" class="py-12 px-12">
+        <div class="container mx-auto mx-16 text-center">
+          <div class="flex text-start flex-row my-6">
+            <div class="border-l-8 border-sky-600 pl-4">
+              <h1 class="text-3xl font-semibold text-gray-800">
+                Detail Aktivitas
+              </h1>
+              <p class="text-slate-500 mt-2 text-lg font-semibold">
+                Halaman ini menyajikan aktivitas lengkap dengan judul, isi,
+                tanggal publikasi, penulis, dan kategori untuk memberikan
+                wawasan yang bermanfaat
+              </p>
             </div>
           </div>
 
@@ -767,7 +695,7 @@
           <div class="px-16 mt-4 w-full">
             <a
               href="./activity.html"
-              class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-gradient-to-br from-blue-50 to-white text-blue-500 rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300 w-full"
+              class="group relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium bg-gradient-to-br from-blue-50 to-white text-blue-500 rounded-full shadow-md border border-blue-600 group-hover:bg-blue-50 transition-colors duration-300 w-full group-hover:scale-105 transition-transform duration-200"
             >
               <span class="relative z-0">Lihat Semua</span>
               <svg
@@ -789,61 +717,18 @@
         </div>
       </section>
 
-      <script>
-        const infoIconActivity = document.getElementById("infoIconActivity");
-        const tooltipActivity = document.getElementById("tooltipActivity");
-
-        infoIconActivity.addEventListener("mouseenter", () => {
-          tooltipActivity.classList.remove("opacity-0");
-          tooltipActivity.classList.add("opacity-100");
-        });
-
-        infoIconActivity.addEventListener("mouseleave", () => {
-          tooltipActivity.classList.remove("opacity-100");
-          tooltipActivity.classList.add("opacity-0");
-        });
-      </script>
-
       <!-- Article Section -->
       <section class="py-8">
-        <div class="container mx-auto px-4">
-          <div class="relative flex items-center justify-between">
-            <div class="w-fit flex items-center my-6">
-              <p
-                class="text-4xl font-bold border-b-4 text-slate-700 border-blue-600"
-              >
-                Artikel
-              </p>
-              <span
-                class="ml-2 text-slate-500 cursor-pointer"
-                id="infoIconArticle"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.834a.75.75 0 001.064.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div
-              class="absolute top-full left-0 bg-white border border-gray-300 rounded-md shadow-md p-4 w-64 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              id="tooltipArticle"
-              style="left: 0; right: auto"
-            >
-              <p class="text-sm text-slate-700">
-                Jelajahi artikel tentang Produk Digital dari kami yang tentunya
-                memberikan insight yang inovatif dan kreatif
-              </p>
-            </div>
+        <div class="container mx-auto px-16">
+          <div class="border-l-8 border-sky-600 pl-4 my-6">
+            <h1 class="text-3xl font-semibold text-gray-800">
+              Artikel
+            </h1>
+            <p class="text-gray-600 mt-2">
+              Halaman ini menyajikan aktivitas lengkap dengan judul, isi,
+              tanggal publikasi, penulis, dan kategori untuk memberikan wawasan
+              yang bermanfaat
+            </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-16">
@@ -871,7 +756,8 @@
                 </div>
                 <div class="px-4 py-2">
                   <div class="flex items-center justify-between">
-                    <span class="text-gray-500 text-xs">2024-10-27</span>
+                    <p class="text-gray-500 text-sm">Kategori Artikel<span class="text-gray-500 text-xs ml-4">2024-10-27</span></p>
+                    
                     <a
                       href="#"
                       class="text-blue-500 hover:text-blue-700 transition-colors duration-200 font-medium text-sm"
@@ -1032,21 +918,6 @@
         </div>
       </section>
 
-      <script>
-        const infoIconArticle = document.getElementById("infoIconArticle");
-        const tooltipActicle = document.getElementById("tooltipArticle");
-
-        infoIconArticle.addEventListener("mouseenter", () => {
-          tooltipActicle.classList.remove("opacity-0");
-          tooltipActicle.classList.add("opacity-100");
-        });
-
-        infoIconArticle.addEventListener("mouseleave", () => {
-          tooltipActicle.classList.remove("opacity-100");
-          tooltipActicle.classList.add("opacity-0");
-        });
-      </script>
-
       <!-- Contact Section -->
       <section
         class="shadow-2xl py-16 relative overflow-hidden bg-gradient-to-br from-blue-50 to-white rounded-2xl"
@@ -1196,11 +1067,7 @@
               Creadigi
             </p>
           </div>
-          <p class="text-gray-700 text-sm mb-8">
-            Creadigi adalah perusahaan yang berdedikasi untuk menghadirkan
-            solusi digital inovatif yang memberdayakan bisnis dan meningkatkan
-            pengalaman pengguna.
-          </p>
+
           <!-- Tautan Media Sosial -->
           <div class="flex space-x-5">
             <a
