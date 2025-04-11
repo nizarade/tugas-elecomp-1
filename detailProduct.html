@@ -1,176 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id"> 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Product | Creadigi</title>
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <title>Detail Produk: Desain Mind Mapping | Creadigi</title> 
+    <!-- Removed Local CSS -->
     <!-- Tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <!-- Removed Bootstrap CSS -->
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+     <!-- Custom Tailwind Config (Same as index.html) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-blue': {
+                light: '#E0F2FE', // sky-100
+                DEFAULT: '#38BDF8', // sky-400
+                medium: '#0EA5E9', // sky-500
+                dark: '#0284C7', // sky-600
+                darker: '#0369A1', // sky-700
+              },
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS (Minimal, for consistency) -->
+    <style>
+       /* Simple fade-in animation */
+      @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in {
+          animation: fadeIn 0.8s ease-out forwards;
+      }
+
+       /* Line clamp helper */
+      .line-clamp-3 { /* Use if needed for descriptions */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+    </style>
+
   </head>
-  <body class="bg-[#fcffff]">
-    <!-- Navbar -->
-    <nav>
+  <body class="bg-gray-50 font-sans text-gray-700"> 
+
+    <!-- Navbar (Copied from redesigned index.html) -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div
-        class="flex justify-between px-24 py-6 shadow-md bg-gradient-to-br from-blue-50 to-white"
+        class="container mx-auto flex justify-between items-center px-6 lg:px-24 py-4"
       >
         <div
           onclick="window.location.href='index.html'"
-          class="flex items-center cursor-pointer"
+          class="flex items-center cursor-pointer group"
         >
-          <img class="size-12 mr-4" src="./logo1.png" alt="" />
+          <img class="size-10 mr-3 transition-transform duration-300 group-hover:rotate-[15deg]" src="./logo1.png" alt="Creadigi Logo" />
           <p
-            class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
+            class="text-2xl font-bold text-brand-blue-dark group-hover:text-brand-blue-medium transition duration-300"
           >
             Creadigi
           </p>
         </div>
-        <div class="flex gap-4">
-          <ul class="flex gap-4 items-center text-gray-600 font-semibold">
-            <li
-            onclick="window.location.href='index.html'"
-              class="active:text-blue-600  hover:scale-105 cursor-pointer"
-            >
-              Beranda
-            </li>
-            <li
-            onclick="window.location.href='tentang.html'"
-              class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
-            >
-              Tentang
-            </li>
-            <li
-            onclick="window.location.href='product.html'"
-              class="active:text-blue-600 text-blue-600  hover:transform hover:scale-105 cursor-pointer"
-            >
-              Produk
-            </li>
-
-            <!-- Aktivitas dengan Submenu -->
+        <!-- Mobile Menu Button Placeholder -->
+         <div class="md:hidden">
+             <button class="text-gray-600 hover:text-brand-blue-dark focus:outline-none">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+             </button>
+         </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-6">
+          <ul class="flex gap-6 items-center text-gray-600 font-medium">
+            <!-- Nav Links -->
+            <li><a href="index.html" class="hover:text-brand-blue-dark transition duration-300 pb-1 border-b-2 border-transparent hover:border-brand-blue-dark">Beranda</a></li>
+            <li><a href="tentang.html" class="hover:text-brand-blue-dark transition duration-300 pb-1 border-b-2 border-transparent hover:border-brand-blue-dark">Tentang</a></li>
+            
+            <li><a href="product.html" class="text-brand-blue-dark font-semibold pb-1 border-b-2 border-brand-blue-dark">Produk</a></li>
+            
             <li class="relative group">
-              <span
-              onclick="window.location.href='activity.html'"
-                class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
-              >
+              <a href="activity.html" class="hover:text-brand-blue-dark transition duration-300 pb-1 border-b-2 border-transparent hover:border-brand-blue-dark flex items-center">
                 Aktivitas
-              </span>
-              <ul
-                class="absolute hidden group-hover:block top-full left-0 bg-white shadow-md rounded-md py-2 w-48 z-10"
-              >
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >Workshop</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >Seminar</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >Pelatihan</a
-                  >
-                </li>
+                <svg class="w-4 h-4 ml-1 fill-current text-gray-500 group-hover:text-brand-blue-dark transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </a>
+              <ul class="absolute hidden group-hover:block top-full left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48 ring-1 ring-black ring-opacity-5 transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
+                  <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200">Workshop</a></li>
+                  <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200">Seminar</a></li>
+                  <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200">Pelatihan</a></li>
               </ul>
             </li>
 
-            <!-- Artikel dengan Submenu -->
-            <li class="relative group">
-              <span
-              onclick="window.location.href='article.html'"
-                class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
-              >
+            
+             <li class="relative group">
+              <a href="article.html" class="hover:text-brand-blue-dark transition duration-300 pb-1 border-b-2 border-transparent hover:border-brand-blue-dark flex items-center">
                 Artikel
-              </span>
-              <ul
-                class="absolute hidden group-hover:block top-full left-0 bg-white shadow-md rounded-md py-2 w-48 z-10"
-              >
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >Teknologi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >Desain</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >Marketing</a
-                  >
-                </li>
+                <svg class="w-4 h-4 ml-1 fill-current text-gray-500 group-hover:text-brand-blue-dark transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </a>
+              <ul class="absolute hidden group-hover:block top-full left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48 ring-1 ring-black ring-opacity-5 transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
+                  <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200">Teknologi</a></li>
+                  <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200">Desain</a></li>
+                  <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200">Marketing</a></li>
               </ul>
             </li>
 
-            <li
-              class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
-            >
-              Kontak
-            </li>
+            <li><a href="index.html#contact" class="hover:text-brand-blue-dark transition duration-300 pb-1 border-b-2 border-transparent hover:border-brand-blue-dark">Kontak</a></li> 
 
-            <!-- Bahasa dengan Submenu -->
+            
             <li class="relative group">
-              <span
-                class="active:text-blue-600 hover:transform hover:scale-105 cursor-pointer"
-              >
+              <span class="hover:text-brand-blue-dark transition duration-300 pb-1 border-b-2 border-transparent hover:border-brand-blue-dark flex items-center cursor-pointer">
+                <svg class="w-5 h-5 mr-1 text-gray-500 group-hover:text-brand-blue-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C13.18 6.061 14.285 6 15.389 6A48.47 48.47 0 0121 8.25M9 18.75h7.5m-7.5-3h7.5M3 14.25l5.25-11.25L14.25 14.25" />
+                </svg>
                 Bahasa
+                <svg class="w-4 h-4 ml-1 fill-current text-gray-500 group-hover:text-brand-blue-dark transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
               </span>
-              <ul
-                class="absolute hidden group-hover:block top-full left-0 bg-white shadow-md rounded-md py-2 w-48 z-10"
-              >
+              <ul class="absolute hidden group-hover:block top-full right-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48 ring-1 ring-black ring-opacity-5 transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
                 <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center"
-                  >
-                    <img
-                      src="./indonesia_logo.png"
-                      alt="Indonesia"
-                      class="mr-2 w-5 h-5 rounded-full"
-                    />
-                    Indonesia
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200 flex items-center">
+                    <img src="./indonesia_logo.png" alt="Indonesia" class="mr-2 w-5 h-5 rounded-sm object-cover"/>Indonesia
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center"
-                  >
-                    <img
-                      src="./english_logo.png"
-                      alt="Inggris"
-                      class="mr-2 w-5 h-5 rounded-full"
-                    />
-                    Inggris
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-brand-blue-dark transition duration-200 flex items-center">
+                    <img src="./english_logo.png" alt="Inggris" class="mr-2 w-5 h-5 rounded-sm object-cover"/>Inggris
                   </a>
                 </li>
               </ul>
@@ -180,252 +146,222 @@
       </div>
     </nav>
 
-    <!-- Main -->
-    <main class="container mx-auto py-8 px-16">
-      <section class="">
-        <!-- Title -->
-        <div class="flex justify-between py-6">
-          <div>
-            <div class="border-l-8 border-sky-600 pl-4">
-              <h1 class="text-3xl font-semibold text-gray-800">Detail Produk</h1>
-              <p class="text-gray-600 mt-2">
-                Kami hadirkan detail produk agar Anda yakin dengan pilihan produk kami.
-              </p>
-            </div>
-          </div>
+    <!-- Main Content -->
+    <main class="container mx-auto py-12 lg:py-16 px-6 lg:px-16"> 
+      <section class="fade-in">
+        <!-- Section Header -->
+        <div class="border-l-4 border-brand-blue-medium pl-4 mb-10">
+          <h1 class="text-3xl font-bold text-gray-800">Detail Produk</h1>
+          <p class="text-gray-500 text-lg mt-1">
+            Pelajari lebih lanjut tentang produk unggulan kami.
+          </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="h-80 overflow-hidden">
-            <img src="./contohMindMap.jpeg" alt="" />
+
+        <!-- Product Details Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+         
+          <div class="w-full group fade-in" style="animation-delay: 0.1s;">
+            <div class="rounded-xl shadow-lg overflow-hidden bg-gray-100">
+                <img
+                    src="./contohMindMap.jpeg"
+                    alt="Desain Mind Mapping Produk Creadigi"
+                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                /> 
+            </div>
+             
           </div>
-          <div class="flex flex-col justify-center">
-            <p class="text-blue-600 mb-2 font-thin text-sm">
-              Baca Selengkapnya Detail Produk Kami
-            </p>
-            <h1 class="text-2xl font-bold mb-4 underline decoration-blue-600">
-              Desain Mind Mapping
-            </h1>
-            <h1 class="text-gray-700 leading-relaxed">
-                Mind mapping, sebagai representasi grafis kompleks dari pola pikir radiasi, merupakan instrumen serbaguna untuk individu dan tim, memungkinkan mereka untuk mengorganisasikan pengetahuan, merencanakan proyek, memecahkan masalah kompleks, dan meningkatkan kreativitas dengan memvisualisasikan hubungan hierarkis dan lateral antara berbagai elemen informasi dalam format yang mudah dipahami.
-            </h1>
+
+          
+          <div class="flex flex-col justify-center fade-in" style="animation-delay: 0.2s;">
+            
+            <span class="text-sm text-brand-blue-medium font-medium mb-2">Visualisasi Ide</span>
+
+           
+            <h2 class="text-2xl lg:text-3xl font-bold text-brand-blue-darker mb-4">
+              Desain Mind Mapping Kreatif
+            </h2>
+
+            
+            <div class="text-gray-600 leading-relaxed space-y-4 mb-8"> 
+                <p>
+                    Mind mapping adalah alat visualisasi yang ampuh untuk menstrukturkan informasi, membantu analisis, pemahaman, sintesis, ingatan, dan pemunculan ide baru. Kami menawarkan jasa desain mind map yang tidak hanya fungsional tetapi juga estetis.
+                </p>
+                <p>
+                    Desain kami mengubah ide kompleks menjadi representasi grafis yang jelas dan menarik, ideal untuk perencanaan proyek, brainstorming tim, presentasi, atau pembelajaran pribadi. Kami memastikan setiap elemen terhubung secara logis dan visual.
+                </p>
+            </div>
+
+            
+            <div class="mb-8">
+                <h4 class="text-lg font-semibold text-gray-800 mb-3">Fitur Utama:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-600 text-sm">
+                    <li>Desain custom sesuai kebutuhan Anda.</li>
+                    <li>Visual menarik dan mudah dipahami.</li>
+                    <li>Format digital (PNG, JPG, PDF, SVG sesuai permintaan).</li>
+                    <li>Revisi minor untuk memastikan kepuasan.</li>
+                    <li>Cocok untuk bisnis, edukasi, dan personal.</li>
+                </ul>
+            </div>
+
+            
+            <div class="mt-4">
+              <a
+                href="index.html#contact" 
+                class="inline-flex items-center justify-center px-8 py-3 bg-brand-blue-dark text-white font-semibold rounded-full hover:bg-brand-blue-darker transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                Hubungi untuk Diskusi
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      
+      <section class="mt-16 lg:mt-24 fade-in" style="animation-delay: 0.3s;">
+          <div class="border-l-4 border-brand-blue-medium pl-4 mb-10">
+              <h2 class="text-2xl font-bold text-gray-800">Produk Terkait</h2>
+              <p class="text-gray-500 text-lg mt-1">
+                  Lihat juga solusi desain kami yang lain.
+              </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+               
+                <div onclick="window.location.href='./detailProduct.html'" class="group bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer flex flex-col">
+                    <div class="h-48 overflow-hidden"> 
+                        <img src="./contohPoster.jpeg" alt="Poster Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-md font-semibold text-brand-blue-dark mb-2 group-hover:text-brand-blue-medium transition duration-300">Poster Design</h3>
+                        <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-2">Desain poster menarik untuk promosi.</p>
+                        <a href="./detailProduct.html" class="mt-auto inline-block text-xs text-brand-blue-medium hover:text-brand-blue-dark font-medium transition duration-300 self-start">
+                            Lihat Detail →
+                        </a>
+                    </div>
+                </div>
+              
+                <div onclick="window.location.href='./detailProduct.html'" class="group bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="./contohWebsite.jpg" alt="Website Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                     <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-md font-semibold text-brand-blue-dark mb-2 group-hover:text-brand-blue-medium transition duration-300">Desain Website</h3>
+                        <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-2">Website modern dan responsif.</p>
+                        <a href="./detailProduct.html" class="mt-auto inline-block text-xs text-brand-blue-medium hover:text-brand-blue-dark font-medium transition duration-300 self-start">
+                            Lihat Detail →
+                        </a>
+                    </div>
+                </div>
+               
+               <div onclick="window.location.href='./detailProduct.html'" class="group bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="./contohIconSetPremium.jpeg" alt="Premium Icon Set" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                     <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-md font-semibold text-brand-blue-dark mb-2 group-hover:text-brand-blue-medium transition duration-300">Icon Set Premium</h3>
+                        <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-2">Koleksi ikon untuk proyek digital.</p>
+                        <a href="./detailProduct.html" class="mt-auto inline-block text-xs text-brand-blue-medium hover:text-brand-blue-dark font-medium transition duration-300 self-start">
+                            Lihat Detail →
+                        </a>
+                    </div>
+                </div>
+                <div class="group bg-gray-100 border border-dashed border-gray-300 rounded-xl flex items-center justify-center h-full min-h-[200px] text-center p-4">
+                    <span class="text-gray-400 text-sm">Produk lainnya segera hadir...</span>
+                </div>
+          </div>
+      </section>
+
     </main>
 
-    <!-- Footer Section -->
-    <footer
-      class="bg-gradient-to-br from-blue-50 to-white pt-16 relative mt-12 overflow-hidden shadow-lg"
-    >
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
-          <!-- Informasi Perusahaan -->
-          <div class="md:col-span-2">
-            <div class="flex text-center items-center mb-6">
-              <img src="./logo1.png" alt="Logo Perusahaan" class="h-12" />
-              <p
-                class="text-2xl font-bold text bg-gradient-to-l from-cyan-300 to-blue-700 bg-clip-text text-transparent"
-              >
-                Creadigi
-              </p>
+     <!-- Footer Section (Copied from redesigned index.html) -->
+    <footer class="bg-gradient-to-b from-blue-100 to-white pt-16 pb-8 relative overflow-hidden border-t border-blue-200 mt-16 lg:mt-24">
+     
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+          <div class="absolute -top-10 -left-10 transform bg-blue-200 rounded-full w-48 h-48 filter blur-2xl"></div>
+          <div class="absolute -bottom-10 -right-10 transform bg-sky-200 rounded-full w-40 h-40 filter blur-2xl"></div>
+        </div>
+
+      <div class="container mx-auto px-6 lg:px-16 relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
+          
+          <div class="lg:col-span-2">
+            <div class="flex items-center mb-5">
+              <img src="./logo1.png" alt="Creadigi Logo" class="h-10 mr-3" />
+              <p class="text-2xl font-bold text-brand-blue-dark">Creadigi</p>
             </div>
-            <p class="text-gray-700 text-sm mb-8">
-              Creadigi adalah perusahaan yang berdedikasi untuk menghadirkan
-              solusi digital inovatif yang memberdayakan bisnis dan meningkatkan
-              pengalaman pengguna.
+            <p class="text-sm text-gray-600 mb-6 max-w-sm">
+              Membantu Anda mewujudkan visi digital melalui desain yang kreatif dan fungsional.
             </p>
-            <!-- Tautan Media Sosial -->
-            <div class="flex space-x-5">
-              <a
-                href="#"
-                class="text-gray-500 hover:text-blue-600 transition-colors duration-300"
-              >
-                <svg
-                  class="w-7 h-7"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.66 9.156 8.432 9.829V15.307h-2.541v-3.914h2.541V9.881c0-2.511 1.492-3.891 3.777-3.891 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.877h2.779l-.443 2.894h-2.336v6.022A10 10 0 0022 12z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-500 hover:text-brand-blue-dark transition duration-300">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.66 9.156 8.432 9.829V15.307h-2.541v-3.914h2.541V9.881c0-2.511 1.492-3.891 3.777-3.891 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.877h2.779l-.443 2.894h-2.336v6.022A10 10 0 0022 12z" clip-rule="evenodd"/></svg>
               </a>
-              <a
-                href="#"
-                class="text-gray-500 hover:text-blue-600 transition-colors duration-300"
-              >
-                <svg
-                  class="w-7 h-7"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07a7.027 7.027 0 014.858.988 7.027 7.027 0 01.988 4.858c.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85a7.027 7.027 0 01-.988 4.858 7.027 7.027 0 01-4.858.988c-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07a7.027 7.027 0 01-4.858-.988 7.027 7.027 0 01-.988-4.858c-.058-1.266-.07-1.646-.07-4.85s.012-3.684.07-4.85a7.027 7.027 0 01.988-4.858 7.027 7.027 0 014.858-.988c1.266-.058 1.646-.07 4.85-.07m0 2.16c-3.217 0-3.62.012-4.87.07a5.027 5.027 0 00-3.542.703 5.027 5.027 0 00-.703 3.542c-.058 1.25-.07 1.653-.07 4.87s.012 3.62.07 4.87a5.027 5.027 0 00.703 3.542 5.027 5.027 0 003.542.703c1.25.058 1.653.07 4.87.07s3.62-.012 4.87-.07a5.027 5.027 0 003.542-.703 5.027 5.027 0 00.703-3.542c.058-1.25-.07-1.653-.07-4.87s.012-3.62-.07-4.87a5.027 5.027 0 00-.703-3.542 5.027 5.027 0 00-3.542-.703c-1.25-.058-1.653-.07-4.87-.07m0 5.483a3.034 3.034 0 100 6.068 3.034 3.034 0 000-6.068m2.45 1.043a1.32 1.32 0 11-2.64 0 1.32 1.32 0 012.64 0"
-                  />
-                </svg>
+              <a href="#" class="text-gray-500 hover:text-brand-blue-dark transition duration-300">
+                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07a7.027 7.027 0 014.858.988 7.027 7.027 0 01.988 4.858c.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85a7.027 7.027 0 01-.988 4.858 7.027 7.027 0 01-4.858.988c-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07a7.027 7.027 0 01-4.858-.988 7.027 7.027 0 01-.988-4.858c-.058-1.266-.07-1.646-.07-4.85s.012-3.684.07-4.85a7.027 7.027 0 01.988-4.858 7.027 7.027 0 014.858-.988c1.266-.058 1.646-.07 4.85-.07zm0 2.16c-3.217 0-3.62.012-4.87.07a5.027 5.027 0 00-3.542.703 5.027 5.027 0 00-.703 3.542c-.058 1.25-.07 1.653-.07 4.87s.012 3.62.07 4.87a5.027 5.027 0 00.703 3.542 5.027 5.027 0 003.542.703c1.25.058 1.653.07 4.87.07s3.62-.012 4.87-.07a5.027 5.027 0 003.542-.703 5.027 5.027 0 00.703-3.542c.058-1.25.07-1.653.07-4.87s-.012-3.62-.07-4.87a5.027 5.027 0 00-.703-3.542 5.027 5.027 0 00-3.542-.703c-1.25-.058-1.653-.07-4.87-.07zm0 5.483a3.034 3.034 0 100 6.068 3.034 3.034 0 000-6.068zm2.45-2.354a1.397 1.397 0 11-2.793 0 1.397 1.397 0 012.793 0z"/></svg>
               </a>
-              <a
-                href="#"
-                class="text-gray-500 hover:text-blue-600 transition-colors duration-300"
-              >
-                <svg
-                  class="w-7 h-7"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.288-.008-.572-.029-.85a8.349 8.349 0 002.275-2.275c.154.29.305.594.453.91a8.318 8.318 0 01-3.779 2.04 16.109 16.109 0 00-1.05-.247 8.348 8.348 0 01-5.991-3.49 8.348 8.348 0 01-3.49-5.991 16.109 16.109 0 00-.247-1.05 8.317 8.317 0 012.04-3.779c.316-.148.62-.299.91-.453a8.349 8.349 0 00-2.275 2.275c-.272.021-.55-.006-.85-.029 0 5.422 4.291 11.675 11.675 11.675z"
-                  />
-                </svg>
+              <a href="#" class="text-gray-500 hover:text-brand-blue-dark transition duration-300">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178-.004-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/></svg>
               </a>
             </div>
           </div>
 
-          <!-- Tautan Berguna -->
+          
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-5">
-              Tautan Berguna
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Beranda</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Tentang</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Artikel</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Produk</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Kontak</a
-                >
-              </li>
+            <h3 class="text-base font-semibold text-gray-900 mb-4">Tautan</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="index.html" class="text-gray-600 hover:text-brand-blue-dark transition">Beranda</a></li>
+              <li><a href="tentang.html" class="text-gray-600 hover:text-brand-blue-dark transition">Tentang</a></li>
+              <li><a href="product.html" class="text-gray-600 hover:text-brand-blue-dark transition">Produk</a></li>
+               <li><a href="activity.html" class="text-gray-600 hover:text-brand-blue-dark transition">Aktivitas</a></li>
+              <li><a href="article.html" class="text-gray-600 hover:text-brand-blue-dark transition">Artikel</a></li>
+              <li><a href="index.html#contact" class="text-gray-600 hover:text-brand-blue-dark transition">Kontak</a></li>
             </ul>
           </div>
 
-          <!-- Artikel Kami -->
+          
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-5">
-              Artikel Kami
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Poster</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Desain Website</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >Mind Mapping</a
-                >
-              </li>
+            <h3 class="text-base font-semibold text-gray-900 mb-4">Layanan</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="text-gray-600 hover:text-brand-blue-dark transition">Desain Grafis</a></li>
+              <li><a href="#" class="text-gray-600 hover:text-brand-blue-dark transition">Desain Web</a></li>
+              <li><a href="#" class="text-gray-600 hover:text-brand-blue-dark transition">UI/UX Design</a></li>
+              <li><a href="#" class="text-gray-600 hover:text-brand-blue-dark transition">Branding</a></li>
             </ul>
           </div>
 
-          <!-- Social Media -->
+          
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-5">
-              Social Media
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300 flex items-center"
-                >
-                  <img class="size-6 mr-2" src="./instagram_logo.png" alt="" />
-                  Instagram
-                </a>
-              </li>
+             <h3 class="text-base font-semibold text-gray-900 mb-4">Kontak Cepat</h3>
+            <ul class="space-y-3 text-sm">
+                 <li class="flex items-center text-gray-600">
+                     <svg class="w-4 h-4 mr-2 text-brand-blue-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                     <a href="mailto:info@creadigi.com" class="hover:text-brand-blue-dark transition">info@creadigi.com</a>
+                 </li>
+                 <li class="flex items-center text-gray-600">
+                     <svg class="w-4 h-4 mr-2 text-brand-blue-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                     <a href="tel:+621234567890" class="hover:text-brand-blue-dark transition">+62 123 456 7890</a>
+                 </li>
+                 <li class="flex items-start text-gray-600">
+                    <svg class="w-4 h-4 mr-2 mt-1 text-brand-blue-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                     <span>Jl. Inspirasi No. 123, Kota Kreatif</span>
+                 </li>
             </ul>
           </div>
 
-          <!-- Marketplace -->
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-5">
-              Marketplace
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                  >No Social Media and Marketplace available</a
-                >
-              </li>
-            </ul>
+        </div>
+
+       
+        <div class="border-t border-blue-200 pt-6">
+          <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            <p class="mb-2 md:mb-0">© 2024 Creadigi. All rights reserved.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="hover:text-brand-blue-dark transition">Privacy Policy</a>
+              <a href="#" class="hover:text-brand-blue-dark transition">Terms of Service</a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Bagian Bawah Footer -->
-      <div class="py-2 px-16 border-t mt-4 border-gray-200">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600"
-        >
-          <p class="mb-2 md:mb-0">© 2024 Creadigi. All rights reserved.</p>
-          <div class="flex space-x-4">
-            <a
-              href="#"
-              class="hover:text-blue-600 transition-colors duration-300"
-              >Privacy Policy</a
-            >
-            <a
-              href="#"
-              class="hover:text-blue-600 transition-colors duration-300"
-              >Terms of Service</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Elemen Dekoratif -->
-      <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div
-          class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 bg-blue-200 rounded-full w-64 h-64 filter blur-3xl opacity-50"
-        ></div>
-        <div
-          class="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 bg-blue-300 rounded-full w-48 h-48 filter blur-3xl opacity-50"
-        ></div>
       </div>
     </footer>
+
   </body>
 </html>
